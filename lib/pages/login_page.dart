@@ -102,7 +102,9 @@ class _LoginPageState extends State<LoginPage> {
                 //sign in button
                 MyButton(
                   text: 'Sign In',
-                  onTap: signUserIn,
+                  onTap: () {
+                    Navigator.pushNamed(context, '/homepage');
+                  },
                 ),
 
                 const SizedBox(height: 50),

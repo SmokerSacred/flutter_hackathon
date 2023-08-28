@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -12,11 +13,26 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page'),
+      backgroundColor: const Color(0xFFf5f5f5),
+      body: const Center(
+        child: Text(
+          'text',
+          style: TextStyle(fontSize: 50),
+        ),
       ),
-      body: Center(
-        child: Text(dynamicText),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: const Color(0xFF009b8d),
+        unselectedItemColor: const Color(0xFF9b9c9d),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle_outlined), label: 'post'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.perm_identity), label: 'profile'),
+        ],
       ),
     );
   }

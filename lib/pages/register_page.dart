@@ -5,7 +5,7 @@ import 'package:futter_hackathon/Components/textfields.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
-  RegisterPage({super.key, required this.onTap});
+  const RegisterPage({super.key, required this.onTap});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -23,7 +23,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFf5f5f5),
+      backgroundColor: const Color(0xFFf5f5f5),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -89,7 +89,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 //sign in button
                 MyButton(
                   text: 'Sign Up',
-                  onTap: signUserUp,
+                  onTap: () {
+                    Navigator.pushNamed(context, '/homepage');
+                  },
                 ),
 
                 const SizedBox(height: 40),
