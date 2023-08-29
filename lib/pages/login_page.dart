@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:futter_hackathon/Components/my_button.dart';
-import 'package:futter_hackathon/Components/square_tile.dart';
 import 'package:futter_hackathon/Components/textfields.dart';
 import 'forgot_pw_page.dart';
 
@@ -109,36 +108,6 @@ class _LoginPageState extends State<LoginPage> {
 
                 const SizedBox(height: 50),
 
-                //or continue with
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          color: Color(0xFF323334),
-                        ),
-                      ),
-                      Text(
-                        'Or Continue with',
-                        style: TextStyle(color: Color(0xFF080808)),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          color: Color(0xFF323334),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                const SizedBox(height: 20),
-
-                //google
-                const SquareTile(imagePath: 'lib/images/google.png'),
-
-                const SizedBox(height: 20),
-
                 //register now
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -149,7 +118,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(width: 4),
                     GestureDetector(
-                      onTap: widget.onTap,
+                      onTap: () {
+                        Navigator.pushNamed(context, '/register');
+                      },
                       child: const Text(
                         'Register Now',
                         style: TextStyle(
