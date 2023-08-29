@@ -15,6 +15,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final usernameController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  final genderController = TextEditingController();
 
   //sign user in
   void signUserUp() {}
@@ -80,6 +81,15 @@ class _RegisterPageState extends State<RegisterPage> {
                 MyTextField(
                   controller: passwordController,
                   hintText: 'Confirm password',
+                  obscureText: true,
+                ),
+
+                const SizedBox(height: 10),
+
+                //textfield Gender
+                MyTextField(
+                  controller: genderController,
+                  hintText: 'Your gender',
                   obscureText: true,
                 ),
 

@@ -57,10 +57,21 @@ class _MyHomePageRealState extends State<MyHomePageReal> {
               const SizedBox(height: 20),
 
               // Recent reports
-              const Row(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [SquareTile(imagePath: 'lib/images/Hackerview.jpeg')],
-                
+                children: [
+                  SquareTile(
+                    imagePath: 'lib/images/Hackerview.jpeg',
+                    headerText: 'Header Text',
+                    textSnippet: 'This is a text snippet related to the image.',
+                  ),
+                  SizedBox(height: 20),
+                  SquareTile(
+                    imagePath: 'lib/images/cyberview.jpeg',
+                    headerText: 'Header Text',
+                    textSnippet: 'This is a text snippet related to the image.',
+                  ),
+                ],
               )
             ],
           ),
